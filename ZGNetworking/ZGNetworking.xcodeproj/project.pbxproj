@@ -19,6 +19,7 @@
 		EF5F253E1DC9C501008E2184 /* ZGURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F253D1DC9C501008E2184 /* ZGURLRequestSerialization.m */; };
 		EF5F25411DC9C522008E2184 /* ZGURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F25401DC9C522008E2184 /* ZGURLResponseSerialization.m */; };
 		EF5F25441DC9C542008E2184 /* ZGNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F25431DC9C542008E2184 /* ZGNetworkReachabilityManager.m */; };
+		EF5F25471DC9CD5C008E2184 /* ZGURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F25461DC9CD5C008E2184 /* ZGURLSessionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,8 @@
 		EF5F25401DC9C522008E2184 /* ZGURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGURLResponseSerialization.m; sourceTree = "<group>"; };
 		EF5F25421DC9C542008E2184 /* ZGNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGNetworkReachabilityManager.h; sourceTree = "<group>"; };
 		EF5F25431DC9C542008E2184 /* ZGNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		EF5F25451DC9CD5C008E2184 /* ZGURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGURLSessionManager.h; sourceTree = "<group>"; };
+		EF5F25461DC9CD5C008E2184 /* ZGURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGURLSessionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +181,8 @@
 			children = (
 				EF5F25391DC9C4BE008E2184 /* ZGHTTPSessionManager.h */,
 				EF5F253A1DC9C4BE008E2184 /* ZGHTTPSessionManager.m */,
+				EF5F25451DC9CD5C008E2184 /* ZGURLSessionManager.h */,
+				EF5F25461DC9CD5C008E2184 /* ZGURLSessionManager.m */,
 			);
 			path = NSURLSession;
 			sourceTree = "<group>";
@@ -335,6 +340,7 @@
 				EF5F25411DC9C522008E2184 /* ZGURLResponseSerialization.m in Sources */,
 				EF013DBA1DC5F93E00972C00 /* ViewController.m in Sources */,
 				EF5F253B1DC9C4BE008E2184 /* ZGHTTPSessionManager.m in Sources */,
+				EF5F25471DC9CD5C008E2184 /* ZGURLSessionManager.m in Sources */,
 				EF013DB71DC5F93E00972C00 /* AppDelegate.m in Sources */,
 				EF013DB41DC5F93E00972C00 /* main.m in Sources */,
 				EF5F25441DC9C542008E2184 /* ZGNetworkReachabilityManager.m in Sources */,

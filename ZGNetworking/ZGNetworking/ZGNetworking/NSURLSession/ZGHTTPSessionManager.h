@@ -7,7 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZGURLSessionManager.h"
 
-@interface ZGHTTPSessionManager : NSObject
+@interface ZGHTTPSessionManager : ZGURLSessionManager
+
++ (instancetype)defaultManager;
+
+- (nullable NSURLSessionDataTask *)GET:(nonnull NSString *)URLString
+                            parameters:(nullable id)parameters
+                               success:(nullable void (^)(NSURLSessionDataTask *task, id responseObject))success
+                               failure:(nullable void (^)(NSURLSessionDataTask * __nullable task, NSError *error))failure;
+
+- (nullable NSURLSessionDataTask *)POST:(nonnull NSString *)URLString
+                             parameters:(nullable id)parameters
+                                success:(nullable void (^)(NSURLSessionDataTask *task, id responseObject))success
+                                failure:(nullable void (^)(NSURLSessionDataTask * __nullable task, NSError *error))failure;
+
 
 @end
