@@ -15,6 +15,10 @@
 		EF013DC21DC5F93E00972C00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF013DC01DC5F93E00972C00 /* LaunchScreen.storyboard */; };
 		EF013DCD1DC5F93E00972C00 /* ZGNetworkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF013DCC1DC5F93E00972C00 /* ZGNetworkingTests.m */; };
 		EF013DD81DC5F93E00972C00 /* ZGNetworkingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF013DD71DC5F93E00972C00 /* ZGNetworkingUITests.m */; };
+		EF5F253B1DC9C4BE008E2184 /* ZGHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F253A1DC9C4BE008E2184 /* ZGHTTPSessionManager.m */; };
+		EF5F253E1DC9C501008E2184 /* ZGURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F253D1DC9C501008E2184 /* ZGURLRequestSerialization.m */; };
+		EF5F25411DC9C522008E2184 /* ZGURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F25401DC9C522008E2184 /* ZGURLResponseSerialization.m */; };
+		EF5F25441DC9C542008E2184 /* ZGNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F25431DC9C542008E2184 /* ZGNetworkReachabilityManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +56,14 @@
 		EF013DD71DC5F93E00972C00 /* ZGNetworkingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGNetworkingUITests.m; sourceTree = "<group>"; };
 		EF013DD91DC5F93E00972C00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF013DE71DC5F98300972C00 /* ZGNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGNetworking.h; sourceTree = "<group>"; };
+		EF5F25391DC9C4BE008E2184 /* ZGHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGHTTPSessionManager.h; sourceTree = "<group>"; };
+		EF5F253A1DC9C4BE008E2184 /* ZGHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGHTTPSessionManager.m; sourceTree = "<group>"; };
+		EF5F253C1DC9C501008E2184 /* ZGURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGURLRequestSerialization.h; sourceTree = "<group>"; };
+		EF5F253D1DC9C501008E2184 /* ZGURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGURLRequestSerialization.m; sourceTree = "<group>"; };
+		EF5F253F1DC9C522008E2184 /* ZGURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGURLResponseSerialization.h; sourceTree = "<group>"; };
+		EF5F25401DC9C522008E2184 /* ZGURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGURLResponseSerialization.m; sourceTree = "<group>"; };
+		EF5F25421DC9C542008E2184 /* ZGNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		EF5F25431DC9C542008E2184 /* ZGNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGNetworkReachabilityManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +157,10 @@
 		EF013DE51DC5F96100972C00 /* ZGNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				EF5F25381DC9C492008E2184 /* Serialization */,
+				EF5F25371DC9C48C008E2184 /* Reachability */,
 				EF013DE61DC5F96100972C00 /* Include */,
+				EF5F25351DC9C468008E2184 /* NSURLSession */,
 			);
 			path = ZGNetworking;
 			sourceTree = "<group>";
@@ -156,6 +171,35 @@
 				EF013DE71DC5F98300972C00 /* ZGNetworking.h */,
 			);
 			path = Include;
+			sourceTree = "<group>";
+		};
+		EF5F25351DC9C468008E2184 /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+				EF5F25391DC9C4BE008E2184 /* ZGHTTPSessionManager.h */,
+				EF5F253A1DC9C4BE008E2184 /* ZGHTTPSessionManager.m */,
+			);
+			path = NSURLSession;
+			sourceTree = "<group>";
+		};
+		EF5F25371DC9C48C008E2184 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				EF5F25421DC9C542008E2184 /* ZGNetworkReachabilityManager.h */,
+				EF5F25431DC9C542008E2184 /* ZGNetworkReachabilityManager.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		EF5F25381DC9C492008E2184 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				EF5F253C1DC9C501008E2184 /* ZGURLRequestSerialization.h */,
+				EF5F253D1DC9C501008E2184 /* ZGURLRequestSerialization.m */,
+				EF5F253F1DC9C522008E2184 /* ZGURLResponseSerialization.h */,
+				EF5F25401DC9C522008E2184 /* ZGURLResponseSerialization.m */,
+			);
+			path = Serialization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,9 +332,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5F25411DC9C522008E2184 /* ZGURLResponseSerialization.m in Sources */,
 				EF013DBA1DC5F93E00972C00 /* ViewController.m in Sources */,
+				EF5F253B1DC9C4BE008E2184 /* ZGHTTPSessionManager.m in Sources */,
 				EF013DB71DC5F93E00972C00 /* AppDelegate.m in Sources */,
 				EF013DB41DC5F93E00972C00 /* main.m in Sources */,
+				EF5F25441DC9C542008E2184 /* ZGNetworkReachabilityManager.m in Sources */,
+				EF5F253E1DC9C501008E2184 /* ZGURLRequestSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +564,7 @@
 				EF013DDE1DC5F93E00972C00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF013DDF1DC5F93E00972C00 /* Build configuration list for PBXNativeTarget "ZGNetworkingTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +573,7 @@
 				EF013DE11DC5F93E00972C00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF013DE21DC5F93E00972C00 /* Build configuration list for PBXNativeTarget "ZGNetworkingUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +582,7 @@
 				EF013DE41DC5F93E00972C00 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
