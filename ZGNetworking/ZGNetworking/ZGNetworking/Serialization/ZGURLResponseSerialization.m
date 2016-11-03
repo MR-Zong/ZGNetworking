@@ -10,4 +10,10 @@
 
 @implementation ZGURLResponseSerialization
 
++ (id)objectWithData:(NSData *)data
+{
+    NSError *error;
+    return [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
+}
+
 @end

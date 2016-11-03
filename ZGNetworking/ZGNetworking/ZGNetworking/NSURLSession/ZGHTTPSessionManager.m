@@ -7,6 +7,8 @@
 //
 
 #import "ZGHTTPSessionManager.h"
+#import "ZGURLRequestSerialization.h"
+#import "ZGURLResponseSerialization.h"
 
 @interface ZGHTTPSessionManager ()
 
@@ -41,10 +43,20 @@
         return nil;
     }
     
-    NSString *fullUrlString = [self fullUrlStringWithURLString:URLString parameters:parameters];
+    NSString *fullUrlString = [ZGURLRequestSerialization fullUrlStringWithURLString:URLString parameters:parameters];
     
     NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:fullUrlString] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        ;;
+        
+        if (error) {
+            if (failure) {
+                failure(task,error);
+            }
+        }else {
+            
+            if (success) {
+                success(task,[ZGURLResponseSerialization objectWithData:data]);
+            }
+        }
     }];
     
     //    [task resume];
@@ -65,10 +77,19 @@
 
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]];
     request.HTTPMethod = @"POST";
-    request.HTTPBody = [[self paramsStringWithParameters:parameters] dataUsingEncoding:NSUTF8StringEncoding];
+    request.HTTPBody = [[ZGURLRequestSerialization paramsStringWithParameters:parameters] dataUsingEncoding:NSUTF8StringEncoding];
     
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        ;;
+        if (error) {
+            if (failure) {
+                failure(task,error);
+            }
+        }else {
+            
+            if (success) {
+                success(task,[ZGURLResponseSerialization objectWithData:data]);
+            }
+        }
     }];
     
     //    [task resume];
@@ -76,39 +97,6 @@
     return task;
 }
 
-
-
-#pragma mark - util function
-- (NSString *)paramsStringWithParameters:(NSDictionary *)parameters
-{
-    NSMutableString *mParamString = [NSMutableString string];
-    
-    NSArray *allKeys = parameters.allKeys;
-    for (int i=0;i<allKeys.count;i++)
-    {
-        NSString *key = allKeys[i];
-        id value = parameters[key];
-        [mParamString appendString:[NSString stringWithFormat:@"%@=%@",key,value]];
-        if (i < allKeys.count - 1) {
-            [mParamString appendString:@"&"];
-        }
-    }
-    
-    return mParamString.copy;
-}
-
-- (NSString *)fullUrlStringWithURLString:(NSString *)URLString parameters:(NSDictionary *)parameters
-{
-    NSMutableString *mFullUrlString = [NSMutableString stringWithString:URLString];
-    NSString *paramString = [self paramsStringWithParameters:parameters];
-    
-    if (paramString.length > 0) {
-        [mFullUrlString appendString:@"?"];
-        [mFullUrlString appendString:paramString];
-    }
-
-    return mFullUrlString.copy;
-}
 
 
 @end

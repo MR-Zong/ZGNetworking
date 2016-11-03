@@ -10,4 +10,7 @@
 
 @interface ZGURLRequestSerialization : NSObject
 
++ (NSString *)paramsStringWithParameters:(NSDictionary *)parameters;
++ (NSString *)fullUrlStringWithURLString:(NSString *)URLString parameters:(NSDictionary *)parameters;
+
 @end

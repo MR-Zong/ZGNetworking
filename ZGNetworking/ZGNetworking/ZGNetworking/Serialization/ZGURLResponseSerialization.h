@@ -10,4 +10,6 @@
 
 @interface ZGURLResponseSerialization : NSObject
 
++ (id)objectWithData:(NSData *)data;
+
 @end
