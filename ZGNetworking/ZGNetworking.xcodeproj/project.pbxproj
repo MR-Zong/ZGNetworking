@@ -160,9 +160,9 @@
 		EF013DE51DC5F96100972C00 /* ZGNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				EF013DE61DC5F96100972C00 /* Include */,
 				EF5F25381DC9C492008E2184 /* Serialization */,
 				EF5F25371DC9C48C008E2184 /* Reachability */,
-				EF013DE61DC5F96100972C00 /* Include */,
 				EF5F25351DC9C468008E2184 /* NSURLSession */,
 			);
 			path = ZGNetworking;

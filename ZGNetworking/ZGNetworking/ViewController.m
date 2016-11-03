@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ZGNetworking.h"
 
 @interface ViewController ()
 
@@ -16,12 +17,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+//    [self getExample];
+    [self postExample];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)getExample
+{
+    ZGHTTPSessionManager *manager = [ZGHTTPSessionManager defaultManager];
+    NSString *urlString = @"http://www.baidu.com";
+    NSDictionary *params = @{
+                             @"a" : @"zong",
+                             @"b" : @89.88,
+                             @"c" : @YES
+                             };
+    [manager GET:urlString parameters:params success:nil failure:nil];
+}
+
+- (void)postExample
+{
+    ZGHTTPSessionManager *manager = [ZGHTTPSessionManager defaultManager];
+    NSString *urlString = @"http://www.baidu.com";
+    NSDictionary *params = @{
+                             @"a" : @"zong",
+                             @"b" : @89.88,
+                             @"c" : @YES
+                             };
+    [manager POST:urlString parameters:params success:nil failure:nil];
 }
 
 @end

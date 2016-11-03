@@ -10,4 +10,7 @@
 
 @interface ZGURLSessionManager : NSObject
 
+@property (nonatomic, strong) NSURLSessionConfiguration *sessionConfiguration;
+@property (nonatomic, strong) NSURLSession *session;
+
 @end
