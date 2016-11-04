@@ -10,6 +10,15 @@
 #import "ZGURLRequestSerialization.h"
 #import "ZGURLResponseSerialization.h"
 
+/**
+ * 未完成需求：
+ * 1，下载文件处理
+ * 2，上传文件
+ # 3，网络监测
+ * 4，下载，上传进度监测
+ * 5，断点下载 （保存未完成数据，分两种，1，NSData（小的） 2,文件（大的））
+ **/
+
 @interface ZGHTTPSessionManager ()
 
 @property (nonatomic, strong) ZGURLSessionManager *urlSessionManager;
