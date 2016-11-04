@@ -39,14 +39,16 @@
 
 - (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(NSDictionary *)parameters session:(NSURLSession *)session success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError *))failure
 {
+
     if (URLString.length <= 0) {
         return nil;
     }
     
     NSString *fullUrlString = [ZGURLRequestSerialization fullUrlStringWithURLString:URLString parameters:parameters];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:fullUrlString]];
+    request.HTTPMethod = @"GET";
     
-    NSURLSessionDataTask *task = [session dataTaskWithURL:[NSURL URLWithString:fullUrlString] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
             if (failure) {
                 failure(task,error);

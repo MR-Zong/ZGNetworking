@@ -18,8 +18,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self getExample];
-    [self postExample];
+    [self getExample];
+//    [self postExample];
 }
 
 - (void)getExample
