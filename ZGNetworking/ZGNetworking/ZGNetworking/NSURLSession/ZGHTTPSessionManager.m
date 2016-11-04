@@ -32,12 +32,12 @@
 
 
 
-- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(NSDictionary *)parameters success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError *))failure
+- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(NSDictionary *)parameters success:(void (^)(NSURLSessionDataTask *,NSURLResponse * , id))success failure:(void (^)(NSURLSessionDataTask * _Nullable,NSURLResponse * , NSError *))failure
 {
    return [self GET:URLString parameters:parameters session:[NSURLSession sharedSession] success:success failure:failure];
 }
 
-- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(NSDictionary *)parameters session:(NSURLSession *)session success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError *))failure
+- (NSURLSessionDataTask *)GET:(NSString *)URLString parameters:(NSDictionary *)parameters session:(NSURLSession *)session success:(void (^)(NSURLSessionDataTask *,NSURLResponse * , id))success failure:(void (^)(NSURLSessionDataTask * _Nullable,NSURLResponse * , NSError *))failure
 {
 
     if (URLString.length <= 0) {
@@ -51,12 +51,12 @@
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
             if (failure) {
-                failure(task,error);
+                failure(task,response,error);
             }
         }else {
             
             if (success) {
-                success(task,[ZGURLResponseSerialization objectWithData:data]);
+                success(task,response,[ZGURLResponseSerialization objectWithData:data]);
             }
         }
     }];
@@ -66,12 +66,12 @@
     return task;
 }
 
-- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(NSDictionary *)parameters success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError *))failure
+- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(NSDictionary *)parameters success:(void (^)(NSURLSessionDataTask *,NSURLResponse * , id))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSURLResponse * ,NSError *))failure
 {
     return [self POST:URLString parameters:parameters session:[NSURLSession sharedSession] success:success failure:failure];
 }
 
-- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(NSDictionary *)parameters session:(NSURLSession *)session success:(void (^)(NSURLSessionDataTask *, id))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError *))failure
+- (NSURLSessionDataTask *)POST:(NSString *)URLString parameters:(NSDictionary *)parameters session:(NSURLSession *)session success:(void (^)(NSURLSessionDataTask *,NSURLResponse * , id))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSURLResponse * ,NSError *))failure
 {
     if (URLString.length <= 0) {
         return nil;
@@ -84,12 +84,12 @@
     NSURLSessionDataTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
             if (failure) {
-                failure(task,error);
+                failure(task,response,error);
             }
         }else {
             
             if (success) {
-                success(task,[ZGURLResponseSerialization objectWithData:data]);
+                success(task,response,[ZGURLResponseSerialization objectWithData:data]);
             }
         }
     }];
