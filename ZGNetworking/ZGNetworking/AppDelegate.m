@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ZGExampleViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    ZGExampleViewController *exampleVC = [ZGExampleViewController new];
+    self.window.rootViewController = exampleVC;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
