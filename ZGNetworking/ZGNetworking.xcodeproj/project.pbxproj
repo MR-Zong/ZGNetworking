@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		4A0913BDBBAFC214D4FC43A0 /* libPods-ZGNetworkingUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDCD6DA7964638F63D00690 /* libPods-ZGNetworkingUITests.a */; };
 		6D4F8889228A957A00F4462A /* ZGExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F8888228A957A00F4462A /* ZGExampleViewController.m */; };
-		6D4F8893228AC55700F4462A /* CAHttpTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F888C228AC55600F4462A /* CAHttpTask.m */; };
-		6D4F8894228AC55700F4462A /* CAHttpSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F888E228AC55600F4462A /* CAHttpSessionManager.m */; };
-		6D4F8895228AC55700F4462A /* CAHttpMultiTasks.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4F888F228AC55600F4462A /* CAHttpMultiTasks.m */; };
 		AC7A4D991300C29AA9DBE2B6 /* libPods-ZGNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA45E3DD187F8F948963DA2B /* libPods-ZGNetworking.a */; };
 		EF013DB41DC5F93E00972C00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF013DB31DC5F93E00972C00 /* main.m */; };
 		EF013DB71DC5F93E00972C00 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF013DB61DC5F93E00972C00 /* AppDelegate.m */; };
@@ -54,13 +51,6 @@
 		6C562CB67D95E5EF802792EE /* Pods-ZGNetworking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZGNetworking.release.xcconfig"; path = "Target Support Files/Pods-ZGNetworking/Pods-ZGNetworking.release.xcconfig"; sourceTree = "<group>"; };
 		6D4F8887228A957A00F4462A /* ZGExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZGExampleViewController.h; sourceTree = "<group>"; };
 		6D4F8888228A957A00F4462A /* ZGExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZGExampleViewController.m; sourceTree = "<group>"; };
-		6D4F888C228AC55600F4462A /* CAHttpTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAHttpTask.m; sourceTree = "<group>"; };
-		6D4F888D228AC55600F4462A /* CAHttpSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAHttpSessionManager.h; sourceTree = "<group>"; };
-		6D4F888E228AC55600F4462A /* CAHttpSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAHttpSessionManager.m; sourceTree = "<group>"; };
-		6D4F888F228AC55600F4462A /* CAHttpMultiTasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAHttpMultiTasks.m; sourceTree = "<group>"; };
-		6D4F8890228AC55600F4462A /* CAHttpTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAHttpTask.h; sourceTree = "<group>"; };
-		6D4F8891228AC55600F4462A /* CAHttpMultiTasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAHttpMultiTasks.h; sourceTree = "<group>"; };
-		6D4F8892228AC55700F4462A /* CAHttpTaskDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAHttpTaskDelegate.h; sourceTree = "<group>"; };
 		7DDCD6DA7964638F63D00690 /* libPods-ZGNetworkingUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZGNetworkingUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E4475BE0302B844B3B8BD9F /* Pods-ZGNetworking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZGNetworking.debug.xcconfig"; path = "Target Support Files/Pods-ZGNetworking/Pods-ZGNetworking.debug.xcconfig"; sourceTree = "<group>"; };
 		CA45E3DD187F8F948963DA2B /* libPods-ZGNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZGNetworking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,28 +137,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		6D4F888A228AC54B00F4462A /* LHXNetWorkLayer */ = {
-			isa = PBXGroup;
-			children = (
-				6D4F888B228AC54B00F4462A /* Api */,
-			);
-			path = LHXNetWorkLayer;
-			sourceTree = "<group>";
-		};
-		6D4F888B228AC54B00F4462A /* Api */ = {
-			isa = PBXGroup;
-			children = (
-				6D4F8891228AC55600F4462A /* CAHttpMultiTasks.h */,
-				6D4F888F228AC55600F4462A /* CAHttpMultiTasks.m */,
-				6D4F888D228AC55600F4462A /* CAHttpSessionManager.h */,
-				6D4F888E228AC55600F4462A /* CAHttpSessionManager.m */,
-				6D4F8890228AC55600F4462A /* CAHttpTask.h */,
-				6D4F888C228AC55600F4462A /* CAHttpTask.m */,
-				6D4F8892228AC55700F4462A /* CAHttpTaskDelegate.h */,
-			);
-			path = Api;
-			sourceTree = "<group>";
-		};
 		C4983874C88B90A6E2784E58 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +175,6 @@
 		EF013DB11DC5F93E00972C00 /* ZGNetworking */ = {
 			isa = PBXGroup;
 			children = (
-				6D4F888A228AC54B00F4462A /* LHXNetWorkLayer */,
 				6D4F8884228A952A00F4462A /* ZGNetWorkLayer */,
 				EF013DE51DC5F96100972C00 /* ZGNetworking */,
 				EF013DB51DC5F93E00972C00 /* AppDelegate.h */,
@@ -514,11 +481,8 @@
 			files = (
 				EF5F25411DC9C522008E2184 /* ZGURLResponseSerialization.m in Sources */,
 				EF013DBA1DC5F93E00972C00 /* ViewController.m in Sources */,
-				6D4F8895228AC55700F4462A /* CAHttpMultiTasks.m in Sources */,
 				EF5F253B1DC9C4BE008E2184 /* ZGHTTPSessionManager.m in Sources */,
 				EF5F25471DC9CD5C008E2184 /* ZGURLSessionManager.m in Sources */,
-				6D4F8893228AC55700F4462A /* CAHttpTask.m in Sources */,
-				6D4F8894228AC55700F4462A /* CAHttpSessionManager.m in Sources */,
 				EF013DB71DC5F93E00972C00 /* AppDelegate.m in Sources */,
 				EF013DB41DC5F93E00972C00 /* main.m in Sources */,
 				EF5F25441DC9C542008E2184 /* ZGNetworkReachabilityManager.m in Sources */,
